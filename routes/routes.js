@@ -41,6 +41,16 @@ router.get('/getOne/:id', async (req, res) => {
         res.status(500).json({ message: error.message })
     }
 })
+router.get('/subservice/service_id/:id', async(req, res)=>{
+    try {
+         let id = req.params.id;
+         const data = await subservice.find({service_id:req.params.id});
+         res.json(data)
+    }
+    catch (error) {
+        res.status(500).json({ message: error.message })
+    }
+} )
 
 // //Update by ID Method
 // router.patch('/update/:id', async (req, res) => {
