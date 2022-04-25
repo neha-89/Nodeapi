@@ -45,7 +45,8 @@ router.get('/subservice/service_id/:id', async(req, res)=>{
     try {
          let id = req.params.id;
          const data = await subservice.find({service_id:req.params.id});
-         res.json(data)
+         res.json(data);
+         console.log(data);
     }
     catch (error) {
         res.status(500).json({ message: error.message })
