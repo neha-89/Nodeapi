@@ -12,6 +12,12 @@ const subservice = new mongoose.Schema({
     details: {
         type: String
     },
+    details_1:{
+        type:String
+    },
+    category_1:{
+        type:String
+    }, 
     img: {
         type: String    
     }
