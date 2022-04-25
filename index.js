@@ -1,7 +1,7 @@
 require('dotenv').config();
 const cors = require('cors');
 const express = require('express');
-const PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT || 8000;
 const mongoose = require('mongoose');
 const mongoString = process.env.DATABASE_URL;
 
